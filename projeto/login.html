@@ -8,10 +8,12 @@
     <link rel="shortcut icon" href="assets/img/logo-1.png" type="image/x-icon">
     
 </head>
+<body>
+
 <header>
     <nav>
         <div class="logo">
-            <img src="assets/img/logo-fit.png" draggable="false">
+            <a href="index.html"><img src="assets/img/logo-fit.png" draggable="false"></a>
         </div>
         <div class="nav-options">
           <p>HOME</p>
@@ -40,34 +42,37 @@
         </div>
     </nav>
 </header>
-<body>
-    <main>
-        <div class="box-extern">
-            <h1>Sign In</h1>
-            <button class="box-login">
-                <img src="assets/img/youtube.png">
-                <h3>Continue With Google</p>
-                </button>
-                <button class="box-login">
-                    <img src="assets/img/youtube.png">
-                    <h3>Continue With Google</p>
-                    </button>
-            <p>or</p>
 
-            <div class="cadastro">
-                <button class="email">Email</button>
-                <button class="senha">Senha</button>
-                <button class="entrar" style="background-color: #8C52FF;">Sign In.</button>
-            </div>
-       
-            <div class="sub-text">
-                <a><p>dont have an account?</p></a>
-                <a><p>Create a account</p></a>
-                <a><p>Forgot a passoword?</p></a>
-                </div>
-            </div>
+    <main>
+        <div class="login-container">
+            <form action="" class="form-login">
+              <ul class="login-nav">
+                
+                <li class="login-nav__item">
+                  <a href="#"><h1>Sign Up</h1></a>
+                </li>
+              </ul>
+              <label for="login-input-user" class="login__label">
+                Usuario
+              </label>
+              <input id="login-input-user" class="login__input" type="text" />
+              <label for="login-input-password" class="login__label">
+                Senha
+              </label>
+              <input id="login-input-password" class="login__input" type="password" />
+              <label for="login-sign-up" class="login__label--checkbox">
+                <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+                Salvar a senha
+              </label>
+              <button class="login__submit" disabled>Sign in</button>
+            </form>
+            <a href="#" class="login__forgot">Esqueceu a Senha?</a>
+          </div>
+          
         
     </main>
     
 </body>
+
+
 </html>
