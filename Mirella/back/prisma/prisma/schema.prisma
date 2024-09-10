@@ -21,7 +21,6 @@ model Usuarios {
   telefone String @db.VarChar(20)
   alimentacao String @db.VarChar(255)
   treino String @db.VarChar(255)
-  
 }
 
 model Alimentacao {
@@ -30,7 +29,6 @@ model Alimentacao {
   carboidratos String @db.VarChar(255)
   frutas String @db.VarChar(255)
   lacticinios String @db.VarChar(255)
-  
 }
 
 model Treino {
@@ -39,5 +37,4 @@ model Treino {
   braco String @db.VarChar(20)
   peito String @db.VarChar(10)
   perna String @db.VarChar(20)
-
 }
