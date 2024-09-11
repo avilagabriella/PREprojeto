@@ -58,7 +58,36 @@ const login = async (req, res) => {
     }
 }
 
+const update = async (req, res) => {
+    const users = await prisma.usuarios.update({
+      where: {
+        id: Number(req.params.user_id)
+      },
+      data: req.body
+    })
+  
+    res.status(200).json({msg: "Tudo correto!" })
+}
+
+const read = async (req, res) => {
+    let user = await prisma.usuarios.findMany({
+      select: {
+        id: true,
+        nome: true,
+        email: true,
+        senha: true,
+        telefone: true,
+        alimentacao: true,
+        treino: true
+      }
+    })
+  
+    res.status(200).json(user).end()
+}
+
 module.exports = {
     create,
-    login
+    login,
+    update,
+    read
 }
