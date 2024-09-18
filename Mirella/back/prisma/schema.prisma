@@ -18,9 +18,9 @@ model Usuarios {
   nome String @db.VarChar(255)
   email String @db.VarChar(20)
   senha String @db.VarChar(10)
-  telefone String @db.VarChar(20)
-  alimentacao String @db.VarChar(255)
-  treino String @db.VarChar(255)
+  telefone String? @db.VarChar(20)
+  alimentacao String? @db.VarChar(255)
+  treino String? @db.VarChar(255)
 }
 
 model Alimentacao {

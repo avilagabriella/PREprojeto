@@ -32,76 +32,35 @@ const create = async (req, res) => {
     }
 };
 
-
 const login = async (req, res) => {
     try {
-        const { email, senha } = req.body;
-
-        // Valida se email e senha foram fornecidos
-        if (!email || !senha) {
-            return res.status(400).json({ message: 'Email e senha são obrigatórios' });
-        }
-
-        // Procura o usuário com o email fornecido
-        const usuario = await prisma.usuarios.findUnique({
-            where: { email },
+        const user = await prisma.usuarios.findFirst({
+            where: {
+                email: req.body.email
+            }
         });
 
-        // Verifica se o usuário existe e se a senha está correta
-        if (usuario && await bcrypt.compare(senha, usuario.senha)) {
-            // Gera um token JWT
-            const token = jwt.sign({ email: usuario.email }, process.env.KEY, {
-                expiresIn: '1h' // Define a expiração como 1 hora
-            });
-
-            // Retorna o token e outras informações do usuário, mas não a senha
-            return res.json({
-                id: usuario.id,
-                nome: usuario.nome,
-                email: usuario.email,
-                telefone: usuario.telefone,
-                alimentacao: usuario.alimentacao,
-                treino: usuario.treino,
-                token
-            });
-        } else {
-            return res.status(401).json({ message: 'Email ou senha inválidos' });
+        if (!user) {
+            return res.status(404).json({ error: "Usuário nâo encontrado"}).end()
         }
+
+        // Talvez essa verificação não funcione, teste-a e caso de certo, apague este comentário.
+
+        if(!user.password === req.body.password) {
+            return res.status(404).json({ error: "Senha incorreta!" }).end()
+        }
+
+        // Tudo deu certo no login, hora de retornar as informaçôes ao front
+
+        res.status(200).json({
+            uid: user.id,
+            email: user.email,
+            user
+        })
     } catch (error) {
-        console.error(error); // Loga o erro para depuração
-        return res.status(500).json({ message: 'Erro interno do servidor' });
+        console.log(error)
     }
-};
-
-// const login = async (req, res) => {
-//     try {
-//         const user = await prisma.usuarios.findFirst({
-//             where: {
-//                 email: req.body.email
-//             }
-//         });
-
-//         if (!user) {
-//             return res.status(404).json({ error: "Usuário nâo encontrado"}).end()
-//         }
-
-//         // Talvez essa verificação não funcione, teste-a e caso de certo, apague este comentário.
-
-//         if(!user.password === req.body.password) {
-//             return res.status(404).json({ error: "Senha incorreta!" }).end()
-//         }
-
-//         // Tudo deu certo no login, hora de retornar as informaçôes ao front
-
-//         res.status(200).json({
-//             uid: user.id,
-//             email: user.email,
-//             user
-//         })
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+}
 
 const update = async (req, res) => {
     const users = await prisma.usuarios.update({
@@ -130,9 +89,18 @@ const read = async (req, res) => {
     res.status(200).json(user).end()
 }
 
+//delete
+const delet = async (req, res) => {
+    const { id } = req.params;
+    await prisma.usuarios.delete({
+      where: { id: Number(id) },
+    });
+    res.status(204).send();
+  }
+
 module.exports = {
     create,
     login,
     update,
-    read
-}
+    read,
+    delet }
