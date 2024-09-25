@@ -34,7 +34,7 @@ const createTreino = async (req, res) => {
     await prisma.treino.delete({
       where: { id: Number(id) },
     });
-    res.status(204).send();
+    res.status(200).json({ message: 'Treino deletado com sucesso.' });
   };
   
 module.exports = {

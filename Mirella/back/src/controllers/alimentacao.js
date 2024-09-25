@@ -33,10 +33,11 @@ const createAlimentacao = async (req, res) => {
   const deleteAlimentacao = async (req, res) => {
     const { id } = req.params;
     await prisma.alimentacao.delete({
-      where: { id: Number(id) },
+        where: { id: Number(id) },
     });
-    res.status(204).send();
-  };
+    res.status(200).json({ message: 'Alimentação deletada com sucesso.' });
+};
+
   
 
   
