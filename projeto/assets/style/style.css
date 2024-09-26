@@ -294,10 +294,10 @@ width: 50px;
 background: #8C52FF;
 }
 .footer-widget ul li {
-display: inline-block;
-float: left;
-width: 50%;
-margin-bottom: 12px;
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
 }
 .footer-widget ul li a:hover{
 color: #8C52FF;
