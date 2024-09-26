@@ -37,6 +37,7 @@ nav {
    margin-inline: 100px;
     padding-inline: 20px;
     margin-top: 10px;
+    
 }
 .logo img {
   width: 240px;
@@ -56,9 +57,14 @@ nav {
   align-items: center;
   color: rgba(255, 255, 255, 0.63);
   
+  
+} 
+.nav-options a {
+  text-decoration: none;
 }
 .nav-options p {
   transition: 1s;
+  
 }
 .nav-options p:hover {
   transform: scale(1.2);
@@ -93,7 +99,15 @@ nav {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
+
+.interface-container {
+  display: flex;
+  justify-content: center;
+}
+
+
 /* Login Form */
 
 .box-extern {
@@ -458,7 +472,7 @@ body {
   .choices {
     display: flex;
     align-items: center;
-    margin-top: 120px;
+   
     flex-direction: column;
     color: white;
   }
