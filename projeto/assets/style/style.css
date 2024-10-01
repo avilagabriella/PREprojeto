@@ -431,3 +431,98 @@ color: #878787;
   transform: scale(1.5);
   transition: all 2s;
 }
+
+
+
+.healt-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+  margin-left: 200px;
+  
+}
+
+
+.head {
+  color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: 20px;
+}
+
+.body-text-healty {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-text-healty h1 {
+  
+  font-family: 'poppins', sans-serif;
+  font-size: 75px;
+  color: white;
+  font-weight: bolder;
+}
+.text-principal-healty {
+  display: flex; 
+  gap: 20px;
+}
+
+
+.sections-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  flex-direction: column;
+  color: white;
+}
+
+.select-card {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+  
+
+.card-heatly {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transition: 1.5s;
+  background-color: #252424 ;
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+ 
+}
+.latetal {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 20px;
+}
+
+.lateral h1 {
+  font-size: 20px;
+  color: white;
+
+}
+.lateral button {
+  width: 30px;
+  height: 30px;
+  background-color: #8C52FF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.card-heatly:hover {
+  transform: scale(1.2);
+  filter:opacity(120%);
+  box-shadow: 0 -20px 150px -20px rgba(204, 203, 203, 0.39);
+  
+}
