@@ -80,11 +80,6 @@
     animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
   
-
-
-
-/* About us */
-
 @keyframes pathTriangle {
     33% {
       stroke-dashoffset: 74;
@@ -174,6 +169,7 @@ span[class^="dot-"]{
     100%{
       opacity: 1;
     }
+<<<<<<< HEAD:projeto/assets/style/loading.css
 }
 
 
@@ -310,4 +306,6 @@ span[class^="dot-"]{
   gap: 40px;
   margin-bottom: 100px;
   margin-top: 100px;
+=======
+>>>>>>> 417d804a85e8cb8d16f6c8f187230297786e329a:projeto/loading.css
 }
