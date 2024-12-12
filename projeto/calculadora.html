@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/clcss/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>FIT FUSION | Calculadora de IMC</title>
+</head>
+<body>
+
+
+    <header>
+        <nav>
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo-fit.png" draggable="false"></a>
+        </div>
+        <div class="nav-options">
+          <p>HOME</p>
+          <a href="#aboutus" style="text-decoration: none; color: inherit"><p>ABOUT US</p></a>
+          <p>SERVICES</p>
+          <p>CLASSES</p>
+          <p>OUR TEAM</p>
+          <p>PAGES</p>
+          <p>CONTACT</p>
+        </div>
+        
+        <div class="itens-lateral">
+          
+          <div class="search">
+            <img src="assets/img/procurar.png" draggable="false">
+          </div>
+
+          <p>|</p>
+          <div class="social-midia">
+            <img src="assets/img/facebook .png" draggable="false" class="facebook">
+            <img src="assets/img/twitter.png" draggable="false" class="twitter">
+            <img src="assets/img/youtube.png" draggable="false" class="youtube">
+            <img src="assets/img/instagram.png" draggable="false" class="instagram">
+
+          </div>
+        </div>
+    </nav></header>
+     
+    <main id="container">
+        <section id="img">
+            <img src="assets/imgs/image-principal.png" draggable="false">
+        </section>
+
+        <section id="calculator">
+            <form id="form">
+                <h1 id="title">
+                    Calculadora - IMC
+                </h1>
+
+                <div class="input-box">
+                    <label for="weight">
+                        Peso em kg
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <input type="number" id="weight" name="weight" required>
+                        <span>
+                            Kg
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="height">
+                        Altura em metros
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler"></i>
+                        <input type="number" step="0.01" id="height" name="height" required>
+                        <span>
+                            m
+                        </span>
+                    </div>
+                </div>
+                
+                <button id="calculate">
+                    Calcular
+                </button>
+            </form>    
+            
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>  
+                </div>
+
+                <div id="more_info">
+                    <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm">
+                        Mais informações sobre o IMC
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>   
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

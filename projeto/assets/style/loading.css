@@ -296,7 +296,7 @@ span[class^="dot-"]{
   right: 10px;
   font-size: 18px;
   cursor: pointer;
-  color: #555;
+  color: red;
 }
 
 .fa-play {
