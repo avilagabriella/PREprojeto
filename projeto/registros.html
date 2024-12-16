@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fit Fusion | Login</title>
-    <link rel="stylesheet" href="assets/style/style2.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" href="assets/img/logo-1.png" type="image/x-icon">
     
 </head>
@@ -44,31 +44,35 @@
 </header>
 
     <main>
-        <div class="login-container">
-            <form action="" class="form-login" id="formLogin">
-              <ul class="login-nav">
+      <div class="login-page">
+        <div class="form">
+          <form class="register-form" method="POST">
+                <h2><i class="fas fa-lock"></i> Cadastro</h2>
                 
-                <li class="login-nav__item">
-                  <a href="#"><h1>Login</h1></a>
-                </li>
-              </ul>
-              <label for="login-input-user" class="login__label">
-                Usuario
-              </label>
-              <input id="login-input-user" class="login__input" type="text" name="email">
-              <label for="login-input-password" class="login__label">
-                Senha
-              </label>
-              <input id="login-input-password" class="login__input" type="password" name="senha">
-              <input type="submit" value="Login" class="login__submit">
-            </form>
-            <a href="#" class="login__forgot">Esqueceu a Senha?</a>
-          </div>
-          
+                <input type="text" placeholder="Nome Completo *" required/>
+                <input type="text" placeholder="Nome de Usuario*" required/>
+                <input type="email" placeholder="Email *" required/>
+                <input type="password" placeholder="Senha *" required/>
+                <button type="submit">Cadastre-se</button>
+                <p class="message">Já tem um Cadastro? <a href="#">Conecte-se</a></p>
+          </form>
+          <form class="login-form" method="post">
+            
+                <h2><i class="fas fa-lock"></i> <h2>Login</h2>
+            
+            <input type="text" placeholder="Usuario" required />
+            <input type="password" placeholder="Senha" required/>
+            <button type="submit" name="send2">Login</button>
+            <p class="message">Não possui Cadastro? <a href="#">Criar uma Nova conta</a></p>
+          </form>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="assets/js/main.js"></script>
         
     </main>
     
 </body>
 
-<script src="assets/js/login.js"></script>
+
 </html>

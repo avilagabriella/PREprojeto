@@ -169,7 +169,6 @@ span[class^="dot-"]{
     100%{
       opacity: 1;
     }
-<<<<<<< HEAD:projeto/assets/style/loading.css
 }
 
 
@@ -306,6 +305,5 @@ span[class^="dot-"]{
   gap: 40px;
   margin-bottom: 100px;
   margin-top: 100px;
-=======
->>>>>>> 417d804a85e8cb8d16f6c8f187230297786e329a:projeto/loading.css
+
 }
