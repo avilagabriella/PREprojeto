@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit Fusion | Login</title>
-    <link rel="stylesheet" href="assets/style/style2.css">
-    <link rel="shortcut icon" href="assets/img/logo-1.png" type="image/x-icon">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Fusion | Login</title>
+  <link rel="stylesheet" href="assets/style/style2.css">
+  <link rel="shortcut icon" href="assets/img/logo-1.png" type="image/x-icon">
+
 </head>
+
 <body>
 
-<header>
+  <header>
     <nav>
-        <div class="logo">
-            <a href="index.html"><img src="assets/img/logo-fit.png" draggable="false"></a>
-        </div>
-        <div class="nav-options">
-          <p>HOME</p>
-          <p>ABOUT US</p>
-          <p>SERVICES</p>
-          <p>CLASSES</p>
-          <p>OUR TEAM</p>
-          <p>PAGES</p>
-          <p>CONTACT</p>
-        </div>
-        
-        <div class="itens-lateral">
-          
-          <div class="search">
-            <img src="assets/img/procurar.png" draggable="false">
-          </div>
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo-fit.png" draggable="false"></a>
+      </div>
+      <div class="nav-options">
+        <p>HOME</p>
+        <p>ABOUT US</p>
+        <p>SERVICES</p>
+        <p>CLASSES</p>
+        <p>OUR TEAM</p>
+        <p>PAGES</p>
+        <p>CONTACT</p>
+      </div>
 
-          <p>|</p>
-          <div class="social-midia">
-            <img src="assets/img/facebook .png" draggable="false">
-            <img src="assets/img/twitter.png" draggable="false">
-            <img src="assets/img/youtube.png" draggable="false">
-            <img src="assets/img/instagram.png" draggable="false">
+      <div class="itens-lateral">
 
-          </div>
+        <div class="search">
+          <img src="assets/img/procurar.png" draggable="false">
         </div>
+
+        <p>|</p>
+        <div class="social-midia">
+          <img src="assets/img/facebook .png" draggable="false">
+          <img src="assets/img/twitter.png" draggable="false">
+          <img src="assets/img/youtube.png" draggable="false">
+          <img src="assets/img/instagram.png" draggable="false">
+
+        </div>
+      </div>
     </nav>
-</header>
+  </header>
 
-    <main>
-        <div class="login-container">
-            <form action="" class="form-login">
-              <ul class="login-nav">
-                
-                <li class="login-nav__item">
-                  <a href="#"><h1>Login</h1></a>
-                </li>
-              </ul>
-              <label for="login-input-user" class="login__label">
-                Usuario
-              </label>
-              <input id="login-input-user" class="login__input" type="text" />
-              <label for="login-input-password" class="login__label">
-                Senha
-              </label>
-              <input id="login-input-password" class="login__input" type="password" />
-              <label for="login-sign-up" class="login__label--checkbox">
-                <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
-                Salvar a senha
-              </label>
-              <button class="login__submit" disabled>LOGIN</button>
-            </form>
-            <a href="#" class="login__forgot">Esqueceu a Senha?</a>
-          </div>
-          
-        
-    </main>
-    
+  <main>
+    <div class="login-container">
+      <form action="" class="form-login" id="formLogin">
+        <ul class="login-nav">
+          <li class="login-nav__item">
+            <a href="#">
+              <h1>Login</h1>
+            </a>
+          </li>
+        </ul>
+        <label for="login-input-user" class="login__label">
+          Usuario
+        </label>
+        <input id="login-input-user" class="login__input" type="text" name="email">
+        <label for="login-input-password" class="login__label">
+          Senha
+        </label>
+        <input id="login-input-password" class="login__input" type="password" name="senha">
+        <input type="submit" value="Login" class="login__submit">
+      </form>
+
+
+
+
+
+
+      <a href="#" class="login__forgot">Esqueceu a Senha?</a>
+    </div>
+
+
+  </main>
 </body>
-
-
+<script src="assets/js/login.js"></script>
 </html>
