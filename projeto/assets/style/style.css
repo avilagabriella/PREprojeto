@@ -796,3 +796,28 @@ team{
 		font-size: 3.2rem;
 	}
 }
+
+.next {
+  background-color: #8C52FF;
+  width: 100px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid #8C52FF;
+  color: white;
+  font-size: 14px;
+  font-family: 'poppins', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: 2s;
+}
+
+
+.next:hover {
+  transform: scale(1.2);
+}
+
+.next-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
