@@ -85,7 +85,8 @@ nav a {
   height: 15px;
 }
 .social-midia {
-  margin-inline: 20px;
+  display: flex;
+  margin-inline: 40px;
 }
 .social-midia img {
   margin-inline: 5px;
