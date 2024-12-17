@@ -18,7 +18,7 @@ body, button, input, textarea {
   color: white;
   background-color: black;
   overflow-x: hidden;
-  overflow-y: hidden;
+  
 }
 
 .hidden {
@@ -408,12 +408,13 @@ hr {
   height: 200px;
   border-radius: 8px;
   color: white;
+  
 }
 
 
 .movie-product:hover {
   transform: scale(1.2);
-  filter: opacity(100%);
+  opacity: 120%;
 }
 
 .product-title {
@@ -633,28 +634,6 @@ tr {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .healt-front {
   display: flex;
   justify-content: center;
@@ -745,4 +724,13 @@ tr {
   transform: scale(1.2);
   filter: opacity(100%);
 
+}
+
+.sub-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  
 }
