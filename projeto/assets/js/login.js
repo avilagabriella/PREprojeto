@@ -4,7 +4,7 @@ const form = document.querySelector('#formLogin');
 
 if (user)
     if (user.logado) {
-        window.location.href = './musculação.html';
+        window.location.href = './home-team.html';
     }
 
 form.addEventListener('submit', function (e) {
@@ -31,7 +31,7 @@ form.addEventListener('submit', function (e) {
             const dados = res;
             dados.logado = true;
             window.localStorage.setItem('userTurmaAtividade', JSON.stringify(dados));
-            window.location.href = './musculação.html';
+            window.location.href = './registros.html';
         })
         .catch(err => console.error('Erro:', err));
 });
